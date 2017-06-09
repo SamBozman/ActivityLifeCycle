@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 
 public class ActivityA extends AppCompatActivity {
@@ -57,4 +58,9 @@ public class ActivityA extends AppCompatActivity {
         Log.d("ActivityA","onRestart");
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("ActivityA", "onStart");
+    }
 }//END class ActivityA
