@@ -12,6 +12,7 @@ public class ActivityA extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.layout_a);
+        Log.d("ActivityA","onCreate");
         }
 
         // android:onClick="buttonHandlerA" in XML design file
@@ -25,5 +26,35 @@ public class ActivityA extends AppCompatActivity {
             }//END if
 
         }//END buttonHandlerA
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("ActivityA","onStop");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("ActivityA","onPause");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("ActivityA","onDestroy");
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.d("ActivityA","onPostResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("ActivityA","onRestart");
+    }
 
 }//END class ActivityA
