@@ -17,20 +17,15 @@ public class ActivityB extends AppCompatActivity {
         setContentView(R.layout.layout_b);
     }
 
-    // android:onClick="buttonHandlerB" in XML design file
+    // android:onClick="buttonHandlerA" in XML design file
     public void buttonHandlerB(View v) {
 
-        switch (v.getId()) {
-            case R.id.button_a:
-                Log.i("Bozman", "Button A was clicked!");
-                break;
+        if(v.getId()==R.id.button_b){
+            Log.i("Bozman", "Button B was clicked!");
 
+        }//END if
 
-            case R.id.button_b:
-                Log.i("Bozman", "Button B was clicked!");
-                break;
-        }
+    }//END buttonHandlerB
 
+}//END class ActivityB
 
-    }
-}
