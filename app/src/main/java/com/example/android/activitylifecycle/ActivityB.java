@@ -1,5 +1,6 @@
 package com.example.android.activitylifecycle;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,7 +23,8 @@ public class ActivityB extends AppCompatActivity {
 
         if(v.getId()==R.id.button_b){
             Log.i("Bozman", "Button B was clicked!");
-
+            Intent i = new Intent (ActivityB.this, ActivityA.class);
+            startActivity(i);
         }//END if
 
     }//END buttonHandlerB
