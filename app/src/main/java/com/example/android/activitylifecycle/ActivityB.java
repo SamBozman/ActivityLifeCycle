@@ -39,7 +39,7 @@ public class ActivityB extends AppCompatActivity {
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        Log.d("ActivityB","onPostResume");
+        Log.d("ActivityB","onResume");
     }
 
     @Override
