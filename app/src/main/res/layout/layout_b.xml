@@ -11,11 +11,4 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <Button
-        android:id="@+id/button_b"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Go to Activity A"
-        android:onClick="buttonHandlerB"
-        android:textSize="24sp" />
 </LinearLayout>

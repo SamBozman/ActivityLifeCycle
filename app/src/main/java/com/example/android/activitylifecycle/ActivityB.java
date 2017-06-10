@@ -16,18 +16,46 @@ public class ActivityB extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_b);
+        Log.d("ActivityB","onCreate");
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("ActivityB","onStop");
     }
 
-    // android:onClick="buttonHandlerA" in XML design file
-    public void buttonHandlerB(View v) {
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("ActivityB","onPause");
+    }
 
-        if(v.getId()==R.id.button_b){
-            Log.i("Bozman", "Button B was clicked!");
-            Intent i = new Intent (ActivityB.this, ActivityA.class);
-            startActivity(i);
-        }//END if
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("ActivityB","onDestroy");
+    }
 
-    }//END buttonHandlerB
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.d("ActivityB","onPostResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("ActivityB","onRestart");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("ActivityB", "onStart");
+    }
+
+
+
 
 }//END class ActivityB
 
