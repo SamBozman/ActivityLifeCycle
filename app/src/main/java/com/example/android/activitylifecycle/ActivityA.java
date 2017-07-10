@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
@@ -21,15 +22,20 @@ public class ActivityA extends AppCompatActivity {
         public void buttonHandlerA(View v) {
 
             if(v.getId()==R.id.button_a){
+
                 //Example of putting a quick (Toast) message on to the screen
+                Toast myToast = Toast.makeText(ActivityA.this,
+                        "Button was pressed on ActivityA screen!",Toast.LENGTH_LONG);
+                //set.Gravity is optional. Without it the message will print on the bottom of the screen
+                myToast.setGravity(Gravity.TOP,100,100);
+                myToast.show();
+
 
                 Log.i("Bozman", "Button A was clicked!");
             Intent i = new Intent (ActivityA.this, ActivityB.class);
             startActivity(i);
 
-                Toast myToast = Toast.makeText(ActivityA.this,
-                    "Button was pressed on ActivityA screen!",Toast.LENGTH_LONG);
-            myToast.show();
+
 
             }//END if
 
